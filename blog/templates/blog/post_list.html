@@ -7,17 +7,13 @@
             <h1>Bienvenido a la pagina de inicio</h1>
         </div>
 
-        <div>
-            <h2>Titulo</h2>
-            <p>Fecha de publicacion</p>
-            <p>Contenido</p>
-        </div>
-
-        <div>
-            <h2>Titulo 2</h2>
-            <p>Fecha de publicacion</p>
-            <p>Contenido</p>
-        </div>
+        {% for post un posts %}
+            <div>
+                <h2>{{ post.titulo }}</h2>
+                <p>{{ post.texto }}</p>
+                <p>Fecha de publicacion: {{ post.fecha_publicacion }}
+            </div>
+        {}% endfor %
 
     </body>
 </html>
